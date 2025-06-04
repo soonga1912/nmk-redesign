@@ -1,30 +1,33 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>국립중앙박물관 홈페이지 리디자인</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>국립중앙박물관 Redesign</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
       font-family: 'Noto Sans KR', sans-serif;
-      background-color: #0d0401;
+      background-color: #000;
       color: #fff;
     }
     header {
       background: url('images/header-image.png') no-repeat center/cover;
       height: 100vh;
       display: flex;
-      justify-content: center;
-      align-items: center;
       flex-direction: column;
-      text-align: center;
-      padding: 2rem;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 2rem 10% 4rem 10%;
+      text-align: left;
     }
     header img.logo {
       width: 160px;
+      height: auto;
       margin-bottom: 1rem;
+      margin-left: 0;
     }
     h1 {
       font-size: 2.5rem;
@@ -32,38 +35,22 @@
     }
     section {
       padding: 4rem 10%;
+      text-align: center;
     }
     .section-title {
       font-size: 2rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 0.5rem;
     }
-    .problems, .concept, .color-font, .structure, .wireframe, .expectation {
-      margin-bottom: 4rem;
+    .section-subtext {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      color: #ccc;
     }
-    .three-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-    .card {
-      background: #1a1a1a;
-      padding: 1.5rem;
-      border-radius: 8px;
-    }
-    .concept-images, .wireframe-images, .mockup-images {
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-    .concept-images img,
-    .wireframe-images img,
-    .mockup-images img {
-      max-width: 200px;
-      border-radius: 8px;
-    }
-    .structure img, .color-font img {
-      width: 100%;
-      max-width: 600px;
+    img {
+      display: block;
+      max-width: 90%;
+      width: 800px;
+      margin: 20px auto;
       border-radius: 8px;
     }
     footer {
@@ -78,60 +65,54 @@
 
 <header>
   <img src="images/logo.png" alt="로고" class="logo" />
-  <h1>국립중앙박물관<br>홈페이지 리디자인</h1>
+  <h1>국립중앙박물관<br />홈페이지 리디자인</h1>
 </header>
 
-<section class="problems">
+<section>
   <h2 class="section-title">기존 UI 문제점</h2>
-  <div class="three-grid">
-    <div class="card"><strong>접근성 미흡</strong><br>시각적 대비와 네비게이션 구조 미흡</div>
-    <div class="card"><strong>노후된 UI/UX</strong><br>낡은 시각 디자인과 낮은 사용성</div>
-    <div class="card"><strong>복잡한 정보 구조</strong><br>방문자가 원하는 정보를 찾기 어려움</div>
+  <img src="images/problems-section.png" alt="문제점">
   </div>
 </section>
 
-<section class="concept">
-  <h2 class="section-title">Concept</h2>
-  <div class="concept-images">
-    <img src="images/concept-icon.png" alt="전통 아이콘" />
-    <img src="images/final-mockup.png" alt="모던 UI" />
-  </div>
-  <p>전통과 현대의 조화, 반응형 구조와 콘텐츠 중심 설계</p>
+<section>
+  <h2 class="section-title">디자인 컨셉</h2>
+  <p class="section-subtext">전통 + 현대</p>
+  <img src="images/concept-icon.png" alt="전통 아이콘" />
 </section>
 
-<section class="color-font">
+<section>
   <h2 class="section-title">Color & Font</h2>
-  <img src="images/color-font-sample.png" alt="컬러와 폰트 가이드">
+  <p class="section-subtext">컬러와 타이포그래피 가이드</p>
+  <img src="images/color-font-sample.png" alt="컬러와 폰트 가이드" />
 </section>
 
-<section class="structure">
-  <h2 class="section-title">정보 구조 및 메뉴 구성</h2>
-  <img src="images/menu-structure.png" alt="메뉴 구조 다이어그램">
+<section>
+  <h2 class="section-title">Diagram</h2>
+  <p class="section-subtext">홈, 관람안내, 전시, 교육 등 주요 콘텐츠 구성</p>
+  <img src="images/menu-structure.png" alt="메뉴 구조 다이어그램" />
 </section>
 
-<section class="wireframe">
-  <h2 class="section-title">스케치 및 와이어프레임</h2>
-  <div class="wireframe-images">
-    <img src="images/wireframe-1.png" alt="와이어프레임 1">
-    <img src="images/wireframe-2.png" alt="와이어프레임 2">
-  </div>
+<section class="wireframe-section">
+  <h2 class="section-title">와이어프레임</h2>
+  <p class="section-subtext">웹페이지 기본 구조 설계안</p>
+  <img src="images/wireframe-1.png" alt="와이어프레임 1" />
 </section>
 
-<section class="expectation">
-  <h2 class="section-title">기대 효과</h2>
-  <div class="mockup-images">
-    <img src="images/final-mockup.png" alt="최종 목업">
-  </div>
-  <p>
-    사용자 중심 정보 설계와 시각적 통일성을 통해 접근성과 가독성이 향상됩니다.
-    모바일 환경에 최적화된 반응형 레이아웃과 예약 시스템 강화로 사용 편의성과 참여도를 높입니다.
-    전통적인 콘텐츠를 현대적으로 풀어낸 UX는 국립중앙박물관의 디지털 정체성을 강화합니다.
-  </p>
+<section>
+  <h2 class="section-title">디자인</h2>
+  <p class="section-subtext">‘전통을 품고 현대를 담은
+ 박물관 UX디자인'</p>
+ <p class="section-memo">이번 국립중앙박물관 웹사이트 리디자인은 사용자 중심의 정보 구조와 
+  <br>직관적인 내비게이션을 통해 관람객이 원하는 정보를 빠르고 쉽게 탐색할 수 있도록 설계되었습니다.</p>
+  <img src="images/final-mockup.png" alt="최종 목업" />
 </section>
 
 <footer>
-  &copy; 2025 국립중앙박물관 리디자인 포트폴리오
+  &copy; 2025 국립중앙박물관 REDESIGN PORTFOLIO
 </footer>
 
 </body>
 </html>
+
+<link rel="stylesheet" href="style.css" />
+
