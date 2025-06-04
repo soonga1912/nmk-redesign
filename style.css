@@ -4,59 +4,97 @@ body {
   background-color: #000;
   color: #fff;
 }
+
 header {
-  background: url('images/header-image.png') no-repeat right;
+  background: url('images/header-image.png') no-repeat center/cover;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: centerㅠ;
+  justify-content: center;
   align-items: flex-start;
-  padding: 0rem 10% 4rem 10%;
+  padding: 2rem 10% 4rem 10%;
   text-align: left;
-  margin: 4rem;
 }
+
 header img.logo {
   width: 160px;
   height: auto;
   margin-bottom: 1rem;
   margin-left: 0;
 }
+
 h1 {
   font-size: 3rem;
   margin: 1rem 0;
 }
+
 section {
   padding: 4rem 10%;
   text-align: center;
 }
+
 .section-title {
   font-size: 2.5rem;
   margin-bottom: 0.3rem;
 }
+
 .section-subtext {
   font-size: 1rem;
   margin-bottom: 2rem;
   color: #ccc;
 }
+
 .section-memo {
-    font-size: 0.8rem;
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
-    color: #515151;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  color: #515151;
 }
+
 img {
   display: block;
-  max-width: 90%;
-  width: 800px;
+  max-width: 100%;
+  height: auto;
   margin: 20px auto;
   border-radius: 8px;
 }
+
 footer {
   text-align: center;
   padding: 2rem;
   background: #111;
   font-size: 0.9rem;
 }
+
 .wireframe-section img {
-    width: 1000px;
+  width: 100%;
+}
+
+/* ✅ 모바일 최적화 */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-subtext,
+  .section-memo {
+    font-size: 0.9rem;
+  }
+
+  section {
+    padding: 2rem 5%;
+  }
+
+  .wireframe-section img {
+    width: 100% !important;
+  }
 }
